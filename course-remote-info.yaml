@@ -18,7 +18,7 @@ stages:
   is_completed: true
 - id: 498
   step: 7821
-  is_completed: false
+  is_completed: true
 - id: 499
   step: 7822
   is_completed: false
@@ -52,6 +52,8 @@ topics:
     theory_id: 4445
   - title: Type conversion
     theory_id: 4672
+  - title: Reading data with a readLine
+    theory_id: 11224
   - title: Type inference
     theory_id: 9506
   - title: Integers in action
@@ -114,7 +116,9 @@ topics:
     theory_id: 6165
   3:
   - title: Objects
-    theory_id: 6773
+    theory_id: 11233
+  - title: Equality
+    theory_id: 11236
   - title: Functions as objects
     theory_id: 5991
   - title: Lambda expressions
@@ -145,6 +149,10 @@ topics:
   5:
   - title: Introduction to OOP
     theory_id: 3614
+  - title: Default arguments
+    theory_id: 4637
+  - title: Named arguments
+    theory_id: 4640
   - title: Declaring classes
     theory_id: 6200
   - title: Constructors
