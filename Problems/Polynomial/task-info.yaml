@@ -1,0 +1,16 @@
+type: code
+files:
+- name: src/Main.kt
+  visible: true
+  text: |-
+    fun polynomial(x: Int, c: Int, b: Int, a: Int): Int {
+        // TODO
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7857
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/7857">JetBrains
+    Academy</a></html>
+  time: Mon, 26 Oct 2020 18:53:19 UTC
+record: -1

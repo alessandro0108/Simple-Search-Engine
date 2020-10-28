@@ -1,0 +1,14 @@
+type: code
+files:
+- name: src/Main.kt
+  visible: true
+  text: "val CharlesTheEleventh = Human()\nval CarolusRex = Human()  \n\nval king\
+    \ = CharlesTheEleventh\nking = CarolusRex"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/11242
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/11242">JetBrains
+    Academy</a></html>
+  time: Mon, 26 Oct 2020 18:26:23 UTC
+record: -1

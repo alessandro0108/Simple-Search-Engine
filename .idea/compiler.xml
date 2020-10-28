@@ -4,12 +4,24 @@
     <bytecodeTargetLevel target="1.8">
       <module name="Problems-Banana!_main" target="1.8" />
       <module name="Problems-Banana!_test" target="1.8" />
+      <module name="Problems-Board_game_basics__Player_main" target="1.8" />
+      <module name="Problems-Board_game_basics__Player_test" target="1.8" />
+      <module name="Problems-Calculate_volume_main" target="1.8" />
+      <module name="Problems-Calculate_volume_test" target="1.8" />
+      <module name="Problems-Car_price_main" target="1.8" />
+      <module name="Problems-Car_price_test" target="1.8" />
       <module name="Problems-Change_program_arguments_main" target="1.8" />
       <module name="Problems-Change_program_arguments_test" target="1.8" />
+      <module name="Problems-Companion_main" target="1.8" />
+      <module name="Problems-Companion_test" target="1.8" />
+      <module name="Problems-Concatenate_3_strings_with_separator_main" target="1.8" />
+      <module name="Problems-Concatenate_3_strings_with_separator_test" target="1.8" />
       <module name="Problems-Continuation-Passing_Style_main" target="1.8" />
       <module name="Problems-Continuation-Passing_Style_test" target="1.8" />
       <module name="Problems-Even_numbers_main" target="1.8" />
       <module name="Problems-Even_numbers_test" target="1.8" />
+      <module name="Problems-Fix_an_error_main" target="1.8" />
+      <module name="Problems-Fix_an_error_test" target="1.8" />
       <module name="Problems-Fix_the_program_main" target="1.8" />
       <module name="Problems-Fix_the_program_test" target="1.8" />
       <module name="Problems-Function_composition__1__main" target="1.8" />
@@ -18,14 +30,24 @@
       <module name="Problems-Function_composition_test" target="1.8" />
       <module name="Problems-Function_generator_main" target="1.8" />
       <module name="Problems-Function_generator_test" target="1.8" />
+      <module name="Problems-Greeting_main" target="1.8" />
+      <module name="Problems-Greeting_test" target="1.8" />
       <module name="Problems-Indexes_main" target="1.8" />
       <module name="Problems-Indexes_test" target="1.8" />
+      <module name="Problems-Kings_of_Sweden_main" target="1.8" />
+      <module name="Problems-Kings_of_Sweden_test" target="1.8" />
       <module name="Problems-Max_main" target="1.8" />
       <module name="Problems-Max_test" target="1.8" />
       <module name="Problems-New_List_main" target="1.8" />
       <module name="Problems-New_List_test" target="1.8" />
       <module name="Problems-Not__predicate_main" target="1.8" />
       <module name="Problems-Not__predicate_test" target="1.8" />
+      <module name="Problems-Perimeter__1__main" target="1.8" />
+      <module name="Problems-Perimeter__1__test" target="1.8" />
+      <module name="Problems-Perimeter_main" target="1.8" />
+      <module name="Problems-Perimeter_test" target="1.8" />
+      <module name="Problems-Polynomial_main" target="1.8" />
+      <module name="Problems-Polynomial_test" target="1.8" />
       <module name="Problems-Printing_arguments_main" target="1.8" />
       <module name="Problems-Printing_arguments_test" target="1.8" />
       <module name="Problems-Remove_us_main" target="1.8" />

@@ -1,0 +1,16 @@
+type: code
+files:
+- name: src/Main.kt
+  visible: true
+  text: |-
+    fun getVolume(...){
+        //TODO
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/4708
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/4708">JetBrains
+    Academy</a></html>
+  time: Mon, 26 Oct 2020 18:55:52 UTC
+record: -1

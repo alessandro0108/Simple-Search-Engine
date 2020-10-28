@@ -1,0 +1,24 @@
+<h2>Car price</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Peter wants to know how much his car costs on the secondary market. Lucky him, there is a special site that can name the exact price. When he opened the site, all the parameters of his car were filled with default values, and it happened to be that all parameters except one were matching with the parameters of Peter's car. So, he changed only one parameter and clicked OK. Wasn't that cool?</p> 
+  <p>Imagine you are the developer that needs to <strong>create the same logic</strong> using a <strong>function</strong>. The function should take parameters: how <strong>old</strong> a car is, how many <strong>kilometers</strong> this car passed, what the <strong>maximum speed</strong> of the car is, whether this car has an <strong>automatic transmission</strong>.</p> 
+  <p>The <strong>default</strong> arguments for this model are: <em>5</em><strong> </strong>years old, passed <em>100000 </em>km, have a maximum speed of <em>120</em><strong> </strong>kilometers per hour(km/h), <em>does not have</em> an automatic transmission. The initial price of a new car with the default equipment is <em>20000$</em>.</p> 
+  <p>The function should work like this:</p> 
+  <ul> 
+   <li>Every year the price of the car decreases by <em>2000</em>$<em>.</em></li> 
+   <li>The price goes down by 100$<strong> </strong>for every kilometer per hour less than <em>120 </em>km/h<strong> </strong>and increases by <em>100$</em><strong> </strong>for every kilometer per hour greater than <em>120 </em>km/h.</li> 
+   <li>The price lowers by <em>200</em>$<strong> </strong>for every <em>10000</em><strong> </strong>kilometers that the car passed. For example, for 19999 km the price decreases by 200 dollars, but for 20000 km the price lowers by 400 dollars.</li> 
+   <li>If the car <em>has</em> an automatic transmission, the price of the car goes up by <em>1500</em>$, otherwise, it remains the same.</li> 
+  </ul> 
+  <p><strong>The first line of the input</strong> contains the parameter that Peter changed which is <code class="java">old</code> for the age of the car, <code class="java">passed</code> for km that this car passed, <code class="java">speed</code> for the maximum speed of the car, <code class="java">auto</code>, for an automatic transmission. <strong>The second line</strong> contains a single integer number, that is, the value of a parameter. For the parameter <code class="java">auto</code> <code class="java">1</code> means that this car has an automatic transmission and <code class="java">0</code> means that the car has a manual transmission.</p> 
+  <p><strong>The output</strong> should state the price of the car is on a secondary market.</p> 
+  <p></p>
+  <div class="alert alert-primary">
+   Try to use named parameters to solve this problem.
+  </div>
+  <p></p>
+ </body>
+</html><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">old<br>6</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">6000</code></pre><br><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">passed<br>150000</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">7000</code></pre><br><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">speed<br>90</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">5000</code></pre><br><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">auto<br>1</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">9500</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 8 seconds</font><br><br>
+<a href="https://hyperskill.org/learn/step/4640">Show topic summary</a>

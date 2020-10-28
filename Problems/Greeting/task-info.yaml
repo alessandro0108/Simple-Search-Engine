@@ -1,0 +1,13 @@
+type: code
+files:
+- name: src/Main.kt
+  visible: true
+  text: fun greetNeo() = greetUser(...)
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7863
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/7863">JetBrains
+    Academy</a></html>
+  time: Tue, 27 Oct 2020 17:48:26 UTC
+record: -1

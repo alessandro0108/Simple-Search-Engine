@@ -1,0 +1,25 @@
+<h2>Greeting</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Suppose you have a function that takes a name and a few other arguments and returns a greeting.</p> 
+  <pre><code class="language-kotlin">fun greetUser(
+    name: String,
+    admin: Boolean = false,
+    smith: Boolean = false,
+    honorific: String = "",
+    greet: String = "Greetings"
+): String {
+    return if (!admin &amp;&amp; !smith) {
+        "$greet, $honorific $name"
+    } else {
+        "Matrix Error"
+    }
+}</code></pre> 
+  <p>Implement a <code class="language-kotlin">greetNeo()</code> function that returns the string "Hello, Mr. Anderson". Use the <code class="language-kotlin">greetUser()</code> function with the correct arguments.</p>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 8 seconds</font><br><br>
+<b>Caution</b><br><br>
+You may see errors in your code or in execution results because of missing context. Don't mind those; simply write your solution and click Check.
+<br><br>
+<a href="https://hyperskill.org/learn/step/4640">Show topic summary</a>

@@ -1,0 +1,21 @@
+type: code
+files:
+- name: src/Main.kt
+  visible: true
+  text: |-
+    class Player(val id: Int, val name: String) {
+        companion object {
+            var role = "playable character"
+            fun getInfo() = "$id, $name, $role"
+        }
+    }
+
+    fun getPlayerInfo(player: Player) = // TODO
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10714
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/10714">JetBrains
+    Academy</a></html>
+  time: Tue, 27 Oct 2020 19:09:15 UTC
+record: -1

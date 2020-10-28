@@ -21,11 +21,19 @@ fun main(args: Array<String>) {
         while (!exit) {
             when (getMenuOptions()) {
                 "1" -> {
+                    val strategies = listOf<String>("ALL", "ANY", "NONE")
+                    println()
+                    println("Select a matching strategy: ALL, ANY, NONE")
+                    val strategy = readLine()!!
+                    if (strategy !in strategies) {
+                        throw java.lang.Exception("Invalid strategy")
+                    }
                     println()
                     println("Enter a name or email to search all suitable people.")
                     val query = readLine()!!
+                    val queryList = query.split(" ")
+                    val results: List<String> = doInvertedIndexSearchWithStrategy(people, index, queryList, strategy)
                     //var results: List<String> = doLinearSearch(people, query)
-                    val results: List<String> = doInvertedIndexSearch(people, index, query)
                     if (results.isNotEmpty()) {
                         printDataSet(results)
                     } else {
@@ -55,7 +63,7 @@ fun main(args: Array<String>) {
 private fun createInvertedIndex(people: List<String>): MutableMap<String, MutableList<Int>> {
     val index = mutableMapOf<String, MutableList<Int>>()
     for (line in people.indices) {
-        val words = people[line].split(" ")
+        val words = people[line].toUpperCase().split(" ")
         for (word in words) {
             if (!index.containsKey(word)) {
                 val indexList = mutableListOf<Int>()
@@ -75,6 +83,7 @@ fun getMenuOptions(): String {
     return readLine()!!
 }
 
+/** linear search: no more used */
 fun doLinearSearch(people: List<String>, query: String): List<String> {
     val results = mutableListOf<String>()
     for (i in people.indices) {
@@ -85,12 +94,69 @@ fun doLinearSearch(people: List<String>, query: String): List<String> {
     return results
 }
 
-fun doInvertedIndexSearch(people: List<String>, index: Map<String, MutableList<Int>>, query: String): List<String> {
+fun doInvertedIndexSearchWithStrategy(people: List<String>, index: Map<String, MutableList<Int>>, queryList: List<String>, strategy: String): List<String> {
+    val matchingLines = when (strategy) {
+        "ALL" -> doInvertedIndexSearchAll(index, queryList)
+        "ANY" -> doInvertedIndexSearchAny(index, queryList)
+        "NONE" -> doInvertedIndexSearchNone(index, queryList)
+        else -> mutableListOf<Int>()
+    }
     val results = mutableListOf<String>()
+    for (line in matchingLines) {
+        results.add(people[line])
+    }
+    return results
+}
+
+fun doInvertedIndexSearchAll(index: Map<String, MutableList<Int>>, queryList: List<String>): List<Int> {
+    var resultLines = mutableListOf<Int>()
+    for (query in queryList) {
+        val queryResult = doInvertedIndexSearch(index, query)
+        if (resultLines.size == 0) {
+            resultLines.addAll(queryResult)
+        } else {
+            resultLines = resultLines.intersect(queryResult).toMutableList()
+        }
+    }
+    return resultLines
+}
+
+fun doInvertedIndexSearchAny(index: Map<String, MutableList<Int>>, queryList: List<String>): List<Int> {
+    var resultLines = mutableListOf<Int>()
+    for (query in queryList) {
+        val queryResult = doInvertedIndexSearch(index, query)
+        if (resultLines.size == 0) {
+            resultLines.addAll(queryResult)
+        } else {
+            resultLines = resultLines.union(queryResult).toMutableList()
+        }
+    }
+    return resultLines
+}
+
+fun doInvertedIndexSearchNone(index: Map<String, MutableList<Int>>, queryList: List<String>): List<Int> {
+    val matchingLines = doInvertedIndexSearchAny(index, queryList)
+    val allLines = getAllLines(index)
+    return allLines.subtract(matchingLines).toList()
+}
+
+fun getAllLines(index: Map<String, MutableList<Int>>): List<Int> {
+    val lines = mutableListOf<Int>()
     for (k in index.keys) {
-        if (query == k && index[k] != null) {
+        if (index[k] != null) {
+            lines.addAll(index[k]!!)
+        }
+    }
+    return lines
+}
+
+/** Returns the lines that match the query */
+fun doInvertedIndexSearch(index: Map<String, MutableList<Int>>, query: String): List<Int> {
+    val results = mutableListOf<Int>()
+    for (k in index.keys) {
+        if (query.toUpperCase() == k && index[k] != null) {
             for (line in index[k]!!) {
-                results.add(people[line])
+                results.add(line)
             }
         }
     }
