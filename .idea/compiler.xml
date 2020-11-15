@@ -12,6 +12,8 @@
       <module name="Problems-Car_price_test" target="1.8" />
       <module name="Problems-Change_program_arguments_main" target="1.8" />
       <module name="Problems-Change_program_arguments_test" target="1.8" />
+      <module name="Problems-Closed_case_main" target="1.8" />
+      <module name="Problems-Closed_case_test" target="1.8" />
       <module name="Problems-Companion_main" target="1.8" />
       <module name="Problems-Companion_test" target="1.8" />
       <module name="Problems-Concatenate_3_strings_with_separator_main" target="1.8" />

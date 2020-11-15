@@ -95,10 +95,19 @@ files:
     }
 
   learner_created: false
+- name: test/SearchEngineTests.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/89/stages/494/implement
-status: Solved
+status: Failed
 feedback:
-  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/89/stages/494/implement">JetBrains
-    Academy</a>
-  time: Tue, 20 Oct 2020 16:30:43 UTC
-record: 1
+  message: |-
+    Wrong answer in test #1
+
+    Please find below the output of your program during this failed test.
+
+    ---
+
+    Hello, World!
+  time: Thu, 15 Oct 2020 20:59:52 UTC
+record: -1
